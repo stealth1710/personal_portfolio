@@ -58,7 +58,6 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "80,Dawlish Road London ",
-  phoneNo: "+44 7436382155 ",
+  address: " London,UK ",
   email: "Adnan.ab164@gmail.com",
 };

@@ -11,11 +11,12 @@ const Contact = () => {
     className='border-b border-neutral-900 pb-20'>
         <h2 className='my-10 text-center text-4xl'> Get In Touch</h2>
         <div className='text-center tracking-tighter'>
+           
+            
+            <a href="#" className='border_b'>{CONTACT.email}</a>
             <p className='my-4'>
                 {CONTACT.address}
             </p>
-            <p className='my_4'>{CONTACT.phoneNo}</p>
-            <a href="#" className='border_b'>{CONTACT.email}</a>
         </div>
     </motion.div>
   )
