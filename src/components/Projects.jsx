@@ -9,6 +9,7 @@ const Projects = () => {
       whileInView={{opacity:1 , y:0}}
       initial={{opacity:0,y:-100}}
       transition={{duration:1.5}}
+      viewport={{ once: true }}
       className="my-20 text-center text-4xl font-thin">Projects</motion.h2>
       <div>
         {PROJECTS.map((project, index) => ( /*mapping the images and their informations in projects folder using a div  */
@@ -19,6 +20,7 @@ const Projects = () => {
             whileInView={{opacity:1,x:0}}
             initial= {{opacity:0,x:-100}}
             transition={{duration:1.5}}
+            viewport={{ once: true }}
             className="w-full lg:w-1/4">
               <img
                 src={project.image}
@@ -33,6 +35,7 @@ const Projects = () => {
             whileInView={{opacity:1,x:0}}
             initial={{opacity:0,x:100}}
             transition={{duration:1.5}}
+            viewport={{ once: true }}
             className="w-full max-w-xl lg:w-3/4 font-thin">
               <h6 className="font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>

@@ -5,7 +5,7 @@ import { SiCplusplus } from "react-icons/si";
 import { SiC } from "react-icons/si";
 import { DiHtml5 } from "react-icons/di";
 import { DiJavascript } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
+
 import { DiMysql } from "react-icons/di";
 import { DiDart } from "react-icons/di";
 import { motion } from "framer-motion";
@@ -32,11 +32,13 @@ const Languages = () => {
       whileInView={{opacity:1,y:0}}
       initial= {{opacity:0,y:-100}}
       transition={{duration:1.5}}
+      viewport={{ once: true }}
       className="my-20 text-center text-4xl font-thin">Languages </motion.h2>
       <motion.div
       whileInView={{opacity:1,x:0}}
       initial= {{opacity:0,x:-100}}
       transition={{duration:1.5}}
+      viewport={{ once: true }}
       className="flex flex-wrap items-center justify-center gap-10">
         <motion.div
          variants={iconVariants(2)}
@@ -75,26 +77,13 @@ const Languages = () => {
         className="rounded-2xl border-4 border-neutral-800 p-4 ">
           <DiHtml5 className="text-7xl text-red-500" />
         </motion.div>
-        <motion.div 
-         variants={iconVariants(7)}
-         animate = "animate"
-         initial = "initial" 
-        className="rounded-2xl border-4 border-neutral-800 p-4 ">
-          <DiDart className="text-7xl text-blue-700" />
-        </motion.div>
+        
         <motion.div 
          variants={iconVariants(6)}
          animate = "animate"
          initial = "initial" 
         className="rounded-2xl border-4 border-neutral-800 p-4 ">
           <DiJavascript className="text-7xl text-yellow-300" />
-        </motion.div>
-        <motion.div
-         variants={iconVariants(4)}
-         animate = "animate"
-         initial = "initial" 
-        className="rounded-2xl border-4 border-neutral-800 p-4 ">
-          <SiTypescript className="text-7xl text-white-400" />
         </motion.div>
         <motion.div
          variants={iconVariants(7)}

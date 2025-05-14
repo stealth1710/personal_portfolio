@@ -8,23 +8,40 @@ const container = (delay) => ({
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5, delay: delay },
+    transition: { duration: 0.5, delay: delay,staggerChildren: 0.05 },
   },
 });
 
+const letter = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 const Hero = () => {
+  const name = "Adnan Biju";
+  const title = "Software"
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
-            <motion.h1
-              variants={container(0)}
+             <motion.h1
+              variants={container}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl flex flex-wrap"
             >
-              Adnan Biju
+              {name.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={letter}
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 1.2 }}
+                  className="inline-block cursor-pointer"
+                  
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
             </motion.h1>
             <motion.span
               variants={container(0.5)}
